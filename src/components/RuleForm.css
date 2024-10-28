@@ -1,0 +1,102 @@
+.rule-form {
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.rule-form div {
+    margin-bottom: 1.5rem;
+}
+
+.rule-form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: #333;
+    font-size: 1rem;
+}
+
+.rule-form input,
+.rule-form textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.rule-form input:focus,
+.rule-form textarea:focus {
+    outline: none;
+    border-color: #4a90e2;
+    box-shadow: 0 0 5px rgba(74, 144, 226, 0.3);
+}
+
+.rule-form button {
+    background-color: #4a90e2;
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.rule-form button:hover {
+    background-color: #357abd;
+}
+
+.rule-form button[type="button"] {
+    background-color: #6c757d;
+    margin-right: 1rem;
+}
+
+.rule-form button[type="button"]:hover {
+    background-color: #5a6268;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .rule-form {
+        margin: 1rem;
+        padding: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .rule-form {
+        padding: 1rem;
+    }
+
+    .rule-form input,
+    .rule-form textarea {
+        padding: 0.6rem;
+    }
+
+    .rule-form button {
+        width: 100%;
+        margin-bottom: 0.5rem;
+    }
+}
+
+/* Placeholder styling */
+.rule-form input::placeholder,
+.rule-form textarea::placeholder {
+    color: #999;
+    font-style: italic;
+}
+
+/* Error state */
+.rule-form input:invalid {
+    border-color: #dc3545;
+}
+
+/* Success state */
+.rule-form input:valid {
+    border-color: #28a745;
+}

@@ -1,0 +1,162 @@
+.evaluator-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.evaluator-card {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 24px;
+}
+
+.evaluator-title {
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 24px;
+    font-size: 24px;
+}
+
+.selected-rule-info {
+    background: #f8f9fa;
+    border-radius: 8px;
+    padding: 16px;
+    margin-bottom: 24px;
+}
+
+.rule-string {
+    color: #6c757d;
+    font-family: monospace;
+    padding: 8px;
+    background: #e9ecef;
+    border-radius: 4px;
+    margin-top: 8px;
+}
+
+.input-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 20px;
+    margin-bottom: 24px;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.input-group label {
+    color: #495057;
+    font-weight: 500;
+}
+
+.input-field,
+.select-field {
+    padding: 10px;
+    border: 2px solid #dee2e6;
+    border-radius: 6px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+.input-field:focus,
+.select-field:focus {
+    border-color: #4dabf7;
+    outline: none;
+}
+
+.button-group {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    margin-bottom: 24px;
+}
+
+.button {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.evaluate-btn {
+    background: #339af0;
+    color: white;
+}
+
+.evaluate-btn:hover {
+    background: #228be6;
+}
+
+.evaluate-btn:disabled {
+    background: #adb5bd;
+    cursor: not-allowed;
+}
+
+.reset-btn {
+    background: #e9ecef;
+    color: #495057;
+}
+
+.reset-btn:hover {
+    background: #dee2e6;
+}
+
+.result-card {
+    text-align: center;
+    padding: 20px;
+    border-radius: 8px;
+    animation: fadeIn 0.3s ease;
+}
+
+.result-card.success {
+    background: #d3f9d8;
+    border: 2px solid #40c057;
+}
+
+.result-card.error {
+    background: #ffe3e3;
+    border: 2px solid #fa5252;
+}
+
+.result-text {
+    font-size: 20px;
+    font-weight: 600;
+    margin: 8px 0;
+}
+
+.no-rule-selected {
+    text-align: center;
+    color: #868e96;
+    padding: 40px;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 600px) {
+    .input-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .button-group {
+        flex-direction: column;
+    }
+    
+    .evaluator-card {
+        padding: 16px;
+    }
+}
